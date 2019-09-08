@@ -12,6 +12,10 @@ class WelcomeController extends AbstractController
      */
     public function index()
     {
+        $entityManager = $this->getDoctrine()->getManager();
+        if ($entityManager->getConnection()->connect()) {
+            echo 'DOCTRINE WORKS';
+        }
         return $this->render('welcome/index.html.twig', [
             'controller_name' => 'WelcomeController',
         ]);

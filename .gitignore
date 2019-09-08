@@ -50,3 +50,5 @@
 
 # Embedded web-server pid file
 /.web-server-pid
+app.yaml
+cloud_sql_proxy

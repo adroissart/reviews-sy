@@ -1,6 +1,6 @@
 doctrine:
     dbal:
-        default_connection:       free_fr
+        default_connection:       default
         connections:
             default:
                 # configure these for your database server
@@ -10,11 +10,18 @@ doctrine:
                 default_table_options:
                     charset: utf8mb4
                     collate: utf8mb4_unicode_ci
-                url: '%env(resolve:DATABASE_URL)%'
+                #url: '%env(resolve:DATABASE_URL)%'
+                host: '%database_host%'
+                port: '%database_port%'
+                dbname: '%database_name%'
+                user: '%database_user%'
+                password: '%database_password%'
+                # add this parameter
+                unix_socket: '%database_socket%'
             free_fr:
                 dbname:           folomi
                 user:             folomi
-                password:         shirley813
+                password:         '%database_password_free%'
                 host:             ftpperso.free.fr
                 server_version:   '3.11'
     orm:
