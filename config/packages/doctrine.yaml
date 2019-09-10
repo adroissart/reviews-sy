@@ -21,7 +21,7 @@ doctrine:
             free_fr:
                 dbname:           folomi
                 user:             folomi
-                password:         '%database_password_free%'
+                password:         '%database_password%'
                 host:             ftpperso.free.fr
                 server_version:   '3.11'
     orm:

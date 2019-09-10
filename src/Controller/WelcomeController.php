@@ -20,4 +20,12 @@ class WelcomeController extends AbstractController
             'controller_name' => 'WelcomeController',
         ]);
     }
+
+    /**
+     * @Route("/", name="root")
+     */
+    public function root_index()
+    {
+        return $this->redirectToRoute('welcome');;
+    }
 }
