@@ -6,6 +6,7 @@ use App\Entity\Film;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 
 class FilmType extends AbstractType
 {
@@ -13,7 +14,10 @@ class FilmType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('year')
+            ->add('year', DateType::class, [
+                // renders it as a single text box
+                'widget' => 'single_text',
+            ])
             ->add('country')
             ->add('director')
             ->add('image')

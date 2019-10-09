@@ -9,11 +9,11 @@
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Image</th>
                 <th>Title</th>
                 <th>Year</th>
                 <th>Country</th>
                 <th>Director</th>
-                <th>Image</th>
                 <th>Note</th>
                 <th>Comment</th>
                 <th>Dateview</th>
@@ -24,11 +24,11 @@
         {% for film in films %}
             <tr>
                 <td>{{ film.id }}</td>
+                <td><img src="{{ film.image }}" width="50"/></td>
                 <td>{{ film.title }}</td>
-                <td>{{ film.year ? film.year|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ film.year ? film.year|date('Y') : '' }}</td>
                 <td>{{ film.country }}</td>
                 <td>{{ film.director }}</td>
-                <td>{{ film.image }}</td>
                 <td>{{ film.note }}</td>
                 <td>{{ film.comment }}</td>
                 <td>{{ film.dateview ? film.dateview|date('Y-m-d H:i:s') : '' }}</td>
