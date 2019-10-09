@@ -52,3 +52,4 @@
 /.web-server-pid
 app.yaml
 cloud_sql_proxy
+/src/Migrations/

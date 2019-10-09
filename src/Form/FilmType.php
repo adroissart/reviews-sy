@@ -14,6 +14,8 @@ class FilmType extends AbstractType
         $builder
             ->add('title')
             ->add('year')
+            ->add('country')
+            ->add('director')
             ->add('image')
             ->add('note')
             ->add('comment')

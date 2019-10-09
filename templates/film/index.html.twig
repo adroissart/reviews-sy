@@ -11,6 +11,8 @@
                 <th>Id</th>
                 <th>Title</th>
                 <th>Year</th>
+                <th>Country</th>
+                <th>Director</th>
                 <th>Image</th>
                 <th>Note</th>
                 <th>Comment</th>
@@ -24,6 +26,8 @@
                 <td>{{ film.id }}</td>
                 <td>{{ film.title }}</td>
                 <td>{{ film.year ? film.year|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ film.country }}</td>
+                <td>{{ film.director }}</td>
                 <td>{{ film.image }}</td>
                 <td>{{ film.note }}</td>
                 <td>{{ film.comment }}</td>

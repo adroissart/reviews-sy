@@ -46,6 +46,16 @@ class Film
      */
     private $dateview;
 
+     /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $director;
+
+    /**
+     * @ORM\Column(type="string", length=127, nullable=true)
+     */
+    private $country;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -119,6 +129,30 @@ class Film
     public function setDateview(?\DateTimeInterface $dateview): self
     {
         $this->dateview = $dateview;
+
+        return $this;
+    }
+
+    public function getDirector(): ?string
+    {
+        return $this->director;
+    }
+
+    public function setDirector(?string $director): self
+    {
+        $this->director = $director;
+
+        return $this;
+    }
+
+    public function getCountry(): ?string
+    {
+        return $this->country;
+    }
+
+    public function setCountry(?string $country): self
+    {
+        $this->country = $country;
 
         return $this;
     }
